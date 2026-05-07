@@ -1,7 +1,11 @@
 /* ==========================================================================
-   CASA · menu.js — render menu from /data/menu.json + sticky tab tracker
-   Renders trusted JSON via DOM construction (no innerHTML for untrusted text).
+   CASA · menu.js — render menu from /data/menu.json
+   - Each item has an Add-to-Order button wired to the shared cart
+   - Wine section is informational only (in-house pour)
+   - Sticky tab tracker for sections
    ========================================================================== */
+
+import * as cart from "./cart.js";
 
 const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
@@ -12,8 +16,7 @@ function el(tag, attrs = {}, ...children) {
     if (v == null || v === false) continue;
     if (k === "class") node.className = v;
     else if (k === "text") node.textContent = v;
-    else if (k.startsWith("data-")) node.setAttribute(k, v);
-    else if (k.startsWith("aria-")) node.setAttribute(k, v);
+    else if (k.startsWith("data-") || k.startsWith("aria-")) node.setAttribute(k, v);
     else if (k in node) node[k] = v;
     else node.setAttribute(k, v);
   }
@@ -40,6 +43,9 @@ function decode(s) {
   const tabsRoot = $("#menu-tabs");
   if (!root) return;
 
+  // Mount the floating cart on the menu page
+  cart.mountFloatingCart();
+
   let data;
   try {
     const res = await fetch("data/menu.json");
@@ -51,7 +57,6 @@ function decode(s) {
     return;
   }
 
-  // Decorative interlude image map (cycles)
   const features = [
     { src: "assets/img/wood-fired-pizza.webp", title: "The brick oven", copy: "Lit at four. Charring bottoms by five. Out at midnight." },
     { src: "assets/img/pasta-hands.webp", title: "Hand-rolled, every morning", copy: "Eight pasta shapes, one rolling pin, the same wooden butcher block since 1985." },
@@ -75,6 +80,7 @@ function decode(s) {
   const frag = document.createDocumentFragment();
 
   data.sections.forEach((sec, idx) => {
+    const isInfoOnly = sec.id === "vino"; // wine is in-house pour, not orderable online
     const section = el("section", { class: "menu-section", id: "sec-" + sec.id, "aria-labelledby": "sec-" + sec.id + "-title" });
 
     const head = el("header", { class: "menu-section__head" });
@@ -91,7 +97,7 @@ function decode(s) {
 
     const list = el("div", { class: "menu-section__list" });
     sec.items.forEach((it) => {
-      const item = el("div", { class: "menu-item" });
+      const item = el("div", { class: "menu-item" + (isInfoOnly ? " is-info" : "") });
 
       const left = el("div");
       const nameDiv = el("div", { class: "menu-item__name" });
@@ -103,10 +109,47 @@ function decode(s) {
       if (it.italian) left.appendChild(el("span", { class: "menu-item__sub", text: decode(it.italian) }));
       item.appendChild(left);
 
-      const price = typeof it.price === "number" ? "$" + it.price : it.price;
-      item.appendChild(el("div", { class: "menu-item__price", text: price }));
+      const priceText = typeof it.price === "number" ? "$" + it.price : it.price;
+      item.appendChild(el("div", { class: "menu-item__price", text: priceText }));
 
       if (it.desc) item.appendChild(el("div", { class: "menu-item__desc", text: decode(it.desc) }));
+
+      // Add-to-Order button (skip for in-house wine pours)
+      if (!isInfoOnly && typeof it.price === "number") {
+        const addBtn = el(
+          "button",
+          {
+            type: "button",
+            class: "menu-item__add",
+            "data-id": it.id,
+            "data-name": decode(it.name),
+            "data-italian": decode(it.italian || ""),
+            "data-price": String(it.price),
+            "aria-label": `Add ${decode(it.name)} to your order`
+          },
+          el("span", { class: "plus", text: "+" }),
+          " Add to Order"
+        );
+        addBtn.addEventListener("click", () => {
+          cart.add({
+            id: it.id,
+            name: decode(it.name),
+            italian: decode(it.italian || ""),
+            price: it.price
+          });
+          // Visual feedback
+          addBtn.classList.add("is-added");
+          const orig = addBtn.lastChild;
+          const origText = " Add to Order";
+          addBtn.lastChild.textContent = " Added ✦";
+          setTimeout(() => {
+            addBtn.classList.remove("is-added");
+            addBtn.lastChild.textContent = origText;
+          }, 900);
+        });
+        item.appendChild(addBtn);
+      }
+
       list.appendChild(item);
     });
     section.appendChild(list);
@@ -155,7 +198,6 @@ function decode(s) {
     });
   });
 
-  // Highlight active tab on scroll
   if ("IntersectionObserver" in window) {
     const sections = root.querySelectorAll(".menu-section");
     const io = new IntersectionObserver(
