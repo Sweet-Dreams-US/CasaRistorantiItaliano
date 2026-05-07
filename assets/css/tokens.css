@@ -1,0 +1,78 @@
+/* ==========================================================================
+   CASA · Design Tokens
+   "Tuscan Editorial" — warm parchment, terracotta heat, deep ink, aged gold.
+   ========================================================================== */
+
+:root {
+  /* ---- Palette ---- */
+  --cream:        #F2EAD7;   /* primary background */
+  --paper:        #E8DBC0;   /* cards / sections */
+  --paper-soft:   #EFE3CB;   /* hovers */
+  --terracotta:   #B0432A;   /* primary accent — sauce red */
+  --sienna:       #8B3A1B;   /* deeper accent */
+  --olive:        #3F4A2A;   /* secondary — basil */
+  --olive-deep:   #2A331C;
+  --gold:         #C8954A;   /* aged gold — labels, dividers */
+  --gold-soft:    #D9B07A;
+  --ink:          #1A1410;   /* primary text */
+  --ink-soft:     #3C2D1F;   /* secondary text */
+  --ink-mute:     #6F5B47;   /* tertiary text */
+  --bone:         #FAF5E8;   /* highlights */
+  --shadow:       rgba(26, 20, 16, 0.18);
+
+  /* ---- Type ---- */
+  --font-display: 'Italiana', 'Bodoni Moda', 'Didot', serif;
+  --font-serif:   'EB Garamond', 'Garamond', 'Times New Roman', serif;
+  --font-italic:  'Cormorant Garamond', 'EB Garamond', serif;
+  --font-mono:    'Courier Prime', 'IBM Plex Mono', monospace;
+
+  --fs-eyebrow:   clamp(0.6875rem, 0.62rem + 0.3vw, 0.8125rem);
+  --fs-body:      clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lede:      clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --fs-h6:        clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --fs-h5:        clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --fs-h4:        clamp(1.625rem, 1.3rem + 1.5vw, 2.5rem);
+  --fs-h3:        clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  --fs-h2:        clamp(2.75rem, 2rem + 4vw, 5.5rem);
+  --fs-h1:        clamp(3.75rem, 2rem + 9vw, 12rem);
+  --fs-numeral:   clamp(5rem, 4rem + 12vw, 16rem);
+
+  /* ---- Spacing ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --sp-11: 12rem;
+
+  /* ---- Layout ---- */
+  --measure: 68ch;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --rail: clamp(1.25rem, 5vw, 5rem);
+  --col-max: 1480px;
+
+  /* ---- Motion ---- */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-warm: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- Misc ---- */
+  --hairline: 1px solid rgba(26, 20, 16, 0.18);
+  --hairline-gold: 1px solid rgba(200, 149, 74, 0.4);
+  --grain-opacity: 0.06;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

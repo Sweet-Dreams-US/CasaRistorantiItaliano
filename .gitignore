@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Local previews
+node_modules/
+*.log
+
+# Pyenv / temp
+__pycache__/
+*.pyc

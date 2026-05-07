@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa · Ristoranti Italiano — Family-owned in Fort Wayne since 1977</title>
+  <meta name="description" content="Four family-owned Italian restaurants in Fort Wayne, Indiana. Hand-rolled pasta, wood-fired pizza, the renowned Casaburo Salad, and complimentary fresh-baked bread tableside. Since 1977." />
+  <meta name="theme-color" content="#F2EAD7" />
+  <link rel="icon" type="image/svg+xml" href="assets/svg/diamond.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Casa · Ristoranti Italiano" />
+  <meta property="og:description" content="Family-owned Italian. Fort Wayne. Since 1977." />
+  <meta property="og:image" content="assets/img/hero-linguine.webp" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ========== Marquee strip ========== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__row">
+        <span class="marquee__item">Mangia bene, vivi bene</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Pane fresco · tableside</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">La famiglia Casaburo · dal 1977</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Wood-fired ovens · hand-rolled pasta</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Quattro ristoranti · una famiglia</span>
+        <span class="marquee__dot">◆</span>
+      </div>
+      <div class="marquee__row" aria-hidden="true">
+        <span class="marquee__item">Mangia bene, vivi bene</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Pane fresco · tableside</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">La famiglia Casaburo · dal 1977</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Wood-fired ovens · hand-rolled pasta</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Quattro ristoranti · una famiglia</span>
+        <span class="marquee__dot">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Navigation ========== -->
+  <header class="nav" id="site-nav">
+    <div class="shell shell--wide nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Casa, home">
+        <span class="nav__brand-mark">Casa</span>
+        <span class="nav__brand-meta">Ristoranti Italiano · Fort Wayne</span>
+      </a>
+
+      <nav class="nav__menu" aria-label="Primary">
+        <a href="story.html" class="nav__link">Our Story</a>
+        <a href="menu.html" class="nav__link">Menu</a>
+        <a href="locations.html" class="nav__link">Locations</a>
+        <a href="reservations.html" class="nav__link">Reservations</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="order.html" class="btn btn--small">Order Online <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="shell shell--wide hero__inner">
+        <div class="hero__text">
+          <div class="hero__eyebrow">
+            <span class="hero__rule"></span>
+            <span class="t-eyebrow">Fort Wayne · Indiana · est. MCMLXXVII</span>
+          </div>
+
+          <h1 class="hero__title reveal--mask"><span>Casa</span></h1>
+
+          <p class="hero__sub">
+            <em>Ristoranti</em> <strong>Italiano</strong><br />
+            Family owned. Wood-fired. <em>Tableside.</em>
+          </p>
+
+          <p class="hero__lede reveal" style="--reveal-delay: 0.2s">
+            Two friends. A small kitchen on Coldwater Road. A salad nobody could replicate. Almost fifty years later, four Fort Wayne dining rooms still pour the same bottomless bread basket and ladle the same brown-butter cream sauces that made <em>Casa</em> a household name.
+          </p>
+
+          <div class="hero__cta reveal" style="--reveal-delay: 0.35s">
+            <a href="order.html" class="btn">Order Online <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a href="menu.html" class="btn btn--ghost">Read the Menu</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal" style="--reveal-delay: 0.1s">
+          <div class="hero__primary">
+            <img src="assets/img/hero-linguine.webp" alt="Overhead plate of Linguine Tutto Mare in a deep terracotta bowl on a Tuscan oak table." />
+          </div>
+          <div class="hero__secondary">
+            <img src="assets/img/casaburo-salad.webp" alt="The Casaburo Salad — chopped romaine, romano cheese, croutons, in a wide ceramic bowl." />
+          </div>
+          <div class="hero__stamp" aria-hidden="true">
+            <span class="stamp">
+              <span class="stamp__inner">
+                Since<br/>
+                <span class="stamp__year">1977</span><br/>
+                Family
+              </span>
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <path id="stamp-circle-hero" d="M 100,100 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" />
+                </defs>
+                <text fill="currentColor" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="11" letter-spacing="3">
+                  <textPath href="#stamp-circle-hero" startOffset="0%">FAMILY OWNED · DAL 1977 · FORT WAYNE INDIANA · </textPath>
+                </text>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero__bg-mark" aria-hidden="true">'77</div>
+      </div>
+    </section>
+
+    <!-- ========== Quote band ========== -->
+    <section class="quote-band">
+      <div class="shell shell--narrow">
+        <p class="quote-band__pull reveal">
+          &ldquo;A house at the table is the only inheritance that matters.&rdquo;
+        </p>
+        <p class="quote-band__attr reveal" style="--reveal-delay: 0.15s">— A Casaburo family kitchen, seasoned over fifty years</p>
+        <hr class="rule rule--ornate" style="margin-top: 2.5rem;">
+      </div>
+    </section>
+
+    <!-- ========== Signature dishes triptych ========== -->
+    <section class="dishes">
+      <div class="shell shell--wide">
+        <div class="section-head reveal">
+          <div class="section-head__label">
+            <span class="section-head__rule"></span>
+            <span class="t-eyebrow">N&deg; 01 · Signatures</span>
+          </div>
+          <h2 class="section-head__title">A few things <span class="flourish">to know us by.</span></h2>
+        </div>
+
+        <div class="dishes__grid">
+          <article class="dish reveal">
+            <div class="dish__frame">
+              <img src="assets/img/casaburo-salad.webp" alt="A wide ceramic bowl of the Casaburo Salad with chopped romaine, romano cheese, peppery dressing." />
+              <span class="badge">Most ordered</span>
+            </div>
+            <span class="dish__italian">Insalata</span>
+            <h3 class="dish__name">The Casaburo</h3>
+            <p class="dish__desc">Crisp romaine, slivered red onion, romano, golden croutons — finished tableside with our peppery house dressing. Served with bottomless fresh-baked bread.</p>
+            <div class="dish__meta">
+              <span class="dish__num">Since '77</span>
+              <span class="t-price">$11</span>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--reveal-delay: 0.15s">
+            <div class="dish__frame">
+              <img src="assets/img/hero-linguine.webp" alt="A plate of Linguine Tutto Mare with shrimp, scallops, and clams in delicate cream sauce." />
+            </div>
+            <span class="dish__italian">Pasta</span>
+            <h3 class="dish__name">Linguine Tutto&nbsp;Mare</h3>
+            <p class="dish__desc">Shrimp, scallops, baby clams and capers in a delicate tomato-cream — the dish Tom Casaburo says he could plate in his sleep, and probably has.</p>
+            <div class="dish__meta">
+              <span class="dish__num">House classic</span>
+              <span class="t-price">$26</span>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--reveal-delay: 0.3s">
+            <div class="dish__frame">
+              <img src="assets/img/wood-fired-pizza.webp" alt="A wood-fired margherita pizza on a wooden peel, sliding into a brick oven." />
+              <span class="badge">Wood-fired</span>
+            </div>
+            <span class="dish__italian">Pizza</span>
+            <h3 class="dish__name">Margherita di&nbsp;Casa</h3>
+            <p class="dish__desc">San Marzano, milky fresh mozzarella, hand-torn basil, finished in a brick oven we light at 4&thinsp;p.m. and don't put out until close.</p>
+            <div class="dish__meta">
+              <span class="dish__num">Wood-fired daily</span>
+              <span class="t-price">$17</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Story preview ========== -->
+    <section class="story-preview">
+      <div class="shell shell--wide story-preview__inner">
+        <div class="story-preview__media reveal">
+          <img src="assets/img/storefront-1977.webp" alt="A vintage 1970s photograph of the original Casa storefront on Coldwater Road, warm tungsten light spilling from the windows." />
+          <span class="story-preview__media-tag">Coldwater Road · Autumn 1977</span>
+        </div>
+
+        <div class="story-preview__text reveal" style="--reveal-delay: 0.2s">
+          <span class="t-eyebrow">N&deg; 02 · Our Story</span>
+          <h2 class="story-preview__title">
+            Two friends.<br />
+            One small kitchen.<br />
+            <em>Forty-eight</em> years.
+          </h2>
+
+          <div class="story-preview__body t-body">
+            <p class="dropcap">
+              In 1977, Jimmy D'Angelo and Tom Casaburo took a lease on a quiet stretch of Coldwater Road and started cooking for their neighbors. The salad nobody else made. The bread always tableside. A wood-fired oven before anyone in Fort Wayne knew what to do with one.
+            </p>
+            <p>
+              Jimmy retired in '89. Tom and Sharon kept the lights on. Their son Jim and daughter T grew up in the kitchen and never really left — they run the daily operation of all four restaurants today, with the same recipes and a few of the same wooden spoons.
+            </p>
+          </div>
+
+          <a href="story.html" class="btn btn--ghost" style="margin-top: 2rem;">
+            Read the full story <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Innovations strip ========== -->
+    <section class="innovations">
+      <div class="shell shell--wide">
+        <div class="section-head reveal">
+          <div class="section-head__label">
+            <span class="section-head__rule"></span>
+            <span class="t-eyebrow t-eyebrow--gold">N&deg; 03 · Innovations</span>
+          </div>
+          <h2 class="section-head__title">Things Casa <em class="flourish" style="color: var(--gold-soft)">brought first</em> to Fort Wayne.</h2>
+        </div>
+
+        <div class="innovations__grid">
+          <article class="innovation reveal">
+            <span class="innovation__num">I.</span>
+            <h3 class="innovation__title">Butter &amp; cheese sauces</h3>
+            <p class="innovation__body">Long before alfredo was a Midwest kitchen staple, Casa was building sauces with butter, real cream and aged romano on every line.</p>
+          </article>
+          <article class="innovation reveal" style="--reveal-delay: 0.1s">
+            <span class="innovation__num">II.</span>
+            <h3 class="innovation__title">Wood-burning pizza ovens</h3>
+            <p class="innovation__body">Brick, hardwood, and patience. We lit the first one in the late '80s and have been pulling charred-bottom margheritas from it ever since.</p>
+          </article>
+          <article class="innovation reveal" style="--reveal-delay: 0.2s">
+            <span class="innovation__num">III.</span>
+            <h3 class="innovation__title">Wood-fired rotisseries</h3>
+            <p class="innovation__body">A slow-turning rotisserie was an unfamiliar sight in 1990s Fort Wayne. The Pollo al Griglia was, and still is, the answer to it.</p>
+          </article>
+          <article class="innovation reveal" style="--reveal-delay: 0.3s">
+            <span class="innovation__num">IV.</span>
+            <h3 class="innovation__title">Bottomless bread tableside</h3>
+            <p class="innovation__body">A house ritual since the first night. The basket lands warm. It comes back warm. There is no menu line item for it because there is no end to it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Locations ========== -->
+    <section class="locations">
+      <div class="shell shell--wide">
+        <div class="section-head reveal">
+          <div class="section-head__label">
+            <span class="section-head__rule"></span>
+            <span class="t-eyebrow">N&deg; 04 · Four Houses</span>
+          </div>
+          <h2 class="section-head__title">Find a table <em class="flourish">close to home.</em></h2>
+        </div>
+
+        <div class="locations__grid" id="locations-grid">
+          <a href="locations.html#dupont" class="location-card reveal">
+            <span class="location-card__num">01.</span>
+            <h3 class="location-card__name">Casa Grille</h3>
+            <span class="location-card__sub">Dupont</span>
+            <div class="location-card__details">
+              <p>411 W Dupont Rd<br/>Fort Wayne, IN 46825</p>
+              <p style="margin-top: 0.5rem;"><a href="tel:+12604894458">(260) 489-4458</a></p>
+            </div>
+            <span class="location-card__cta">View location</span>
+          </a>
+
+          <a href="locations.html#stellhorn" class="location-card reveal" style="--reveal-delay: 0.1s">
+            <span class="location-card__num">02.</span>
+            <h3 class="location-card__name">Casa Grille Italiano</h3>
+            <span class="location-card__sub">Stellhorn</span>
+            <div class="location-card__details">
+              <p>6340 Stellhorn Rd<br/>Fort Wayne, IN 46815</p>
+              <p style="margin-top: 0.5rem;"><a href="tel:+12604856880">(260) 485-6880</a></p>
+            </div>
+            <span class="location-card__cta">View location</span>
+          </a>
+
+          <a href="locations.html#jefferson" class="location-card reveal" style="--reveal-delay: 0.2s">
+            <span class="location-card__num">03.</span>
+            <h3 class="location-card__name">Casa! Ristorante</h3>
+            <span class="location-card__sub">W. Jefferson</span>
+            <div class="location-card__details">
+              <p>7545 W Jefferson Blvd<br/>Fort Wayne, IN 46804</p>
+              <p style="margin-top: 0.5rem;"><a href="tel:+12604326000">(260) 432-6000</a></p>
+            </div>
+            <span class="location-card__cta">View location</span>
+          </a>
+
+          <a href="locations.html#parnell" class="location-card reveal" style="--reveal-delay: 0.3s">
+            <span class="location-card__num">04.</span>
+            <h3 class="location-card__name">Casa Ristorante Italiano</h3>
+            <span class="location-card__sub">Parnell</span>
+            <div class="location-card__details">
+              <p>4111 Parnell Ave<br/>Fort Wayne, IN 46805</p>
+              <p style="margin-top: 0.5rem;"><a href="tel:+12604836880">(260) 483-6880</a></p>
+            </div>
+            <span class="location-card__cta">View location</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="shell shell--wide">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h2 class="footer__head">Mangia bene.<br/><em class="flourish">Vivi bene.</em></h2>
+          <p class="footer__lede">Fort Wayne's Italian table since 1977. Family-owned, four houses strong, with a pot of sauce always on the back burner.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="locations.html#dupont">Dupont</a></li>
+            <li><a href="locations.html#stellhorn">Stellhorn</a></li>
+            <li><a href="locations.html#jefferson">W. Jefferson</a></li>
+            <li><a href="locations.html#parnell">Parnell</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Hours</h4>
+          <ul class="footer__hours">
+            <li><span>Mon &ndash; Thu</span><span>11a &ndash; 9p</span></li>
+            <li><span>Fri &ndash; Sat</span><span>11a &ndash; 10p</span></li>
+            <li><span>Sunday</span><span>12p &ndash; 9p</span></li>
+            <li><span>Lunch</span><span>11a &ndash; 3p</span></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Stay in Touch</h4>
+          <ul>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="menu.html">Menu &amp; Wine</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="#">Catering &amp; Banquets</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer__rule" />
+      <div class="shell shell--wide footer__legal">
+        <span>&copy; 1977 &ndash; <span id="year"></span> · Casa Restaurant Group · Fort Wayne, Indiana</span>
+        <span>Built lovingly in Fort Wayne · <a href="#">Privacy</a> · <a href="#">Accessibility</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

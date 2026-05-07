@@ -1,0 +1,428 @@
+/* ==========================================================================
+   CASA · Story page + Fort Wayne Timeline
+   ========================================================================== */
+
+/* ---- Editorial header ---- */
+.story-hero {
+  padding-top: clamp(2rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  position: relative;
+}
+
+.story-hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.story-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 1.5rem + 6vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.story-hero__title em {
+  font-family: var(--font-italic);
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.story-hero__lede {
+  margin-top: 1.5rem;
+  font-family: var(--font-italic);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  line-height: 1.45;
+  max-width: 36ch;
+}
+
+.story-hero__media {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.story-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 880px) {
+  .story-hero__inner { grid-template-columns: 1fr; }
+  .story-hero__media { max-width: 480px; }
+}
+
+/* ---- Long-form chapters ---- */
+.chapter {
+  padding-block: clamp(3rem, 7vw, 6rem);
+  position: relative;
+}
+
+.chapter--alt { background: var(--paper); }
+
+.chapter__head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.chapter__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(3rem, 2rem + 4vw, 6rem);
+  color: var(--gold);
+  line-height: 0.85;
+  opacity: 0.85;
+}
+
+.chapter__label {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.chapter__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  line-height: 1;
+}
+
+.chapter__title em {
+  font-family: var(--font-italic);
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.chapter__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.chapter__text {
+  max-width: 56ch;
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.chapter__text p + p { margin-top: 1.25rem; text-indent: 1.5em; }
+
+.chapter__media {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.chapter__media--wide {
+  aspect-ratio: 4/3;
+}
+
+.chapter__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.chapter__caption {
+  margin-top: 0.75rem;
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-mute);
+}
+
+@media (max-width: 880px) {
+  .chapter__body { grid-template-columns: 1fr; }
+}
+
+/* Pull quote card */
+.pullquote {
+  margin: clamp(2rem, 4vw, 3rem) 0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-left: 2px solid var(--terracotta);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pullquote__quote {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
+  line-height: 1.4;
+}
+
+.pullquote__attr {
+  margin-top: 1rem;
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.8125rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* ==========================================================================
+   FORT WAYNE TIMELINE — horizontal scrolling experience
+   ========================================================================== */
+
+.timeline {
+  background: var(--ink);
+  color: var(--bone);
+  padding-block: clamp(4rem, 8vw, 8rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  opacity: 0.4;
+}
+
+.timeline::before { top: 0; }
+.timeline::after { bottom: 0; }
+
+.timeline__intro {
+  max-width: 56ch;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.timeline__eyebrow {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.875rem;
+  display: block;
+}
+
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  line-height: 0.95;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.timeline__title em {
+  font-family: var(--font-italic);
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+.timeline__lede {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--gold-soft);
+  line-height: 1.55;
+}
+
+/* Horizontal scroll track */
+.timeline__track-wrap {
+  position: relative;
+  margin-inline: calc(-1 * var(--rail));
+  padding-inline: var(--rail);
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) rgba(200, 149, 74, 0.15);
+}
+
+.timeline__track-wrap::-webkit-scrollbar { height: 6px; }
+.timeline__track-wrap::-webkit-scrollbar-track { background: rgba(200, 149, 74, 0.15); }
+.timeline__track-wrap::-webkit-scrollbar-thumb {
+  background: rgba(200, 149, 74, 0.6);
+  border-radius: 999px;
+}
+
+.timeline__rail {
+  position: absolute;
+  top: 5.5rem;
+  left: var(--rail);
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(200, 149, 74, 0.6) 4%, rgba(200, 149, 74, 0.6) 96%, transparent 100%);
+  pointer-events: none;
+}
+
+.timeline__track {
+  display: flex;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  padding-block: 1rem 2rem;
+  width: max-content;
+}
+
+.tl-card {
+  flex: 0 0 clamp(280px, 28vw, 380px);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.tl-card__year {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
+  line-height: 1;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.tl-card__year-mark {
+  position: relative;
+}
+
+.tl-card__year-mark::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.875rem);
+  left: 0;
+  width: 14px; height: 14px;
+  border-radius: 999px;
+  background: var(--terracotta);
+  border: 2px solid var(--ink);
+  outline: 1px solid var(--gold);
+  z-index: 2;
+}
+
+.tl-card__cat {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-top: 1.5rem;
+}
+
+.tl-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+  line-height: 1.1;
+  color: var(--bone);
+  margin-top: 0.5rem;
+}
+
+.tl-card__body {
+  margin-top: 0.875rem;
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--gold-soft);
+}
+
+.tl-card__media {
+  margin-top: 1.25rem;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: rgba(200, 149, 74, 0.1);
+  border: 1px solid rgba(200, 149, 74, 0.2);
+}
+
+.tl-card__media img { width: 100%; height: 100%; object-fit: cover; opacity: 0.92; }
+
+.tl-card--major .tl-card__year { color: var(--terracotta); }
+.tl-card--major .tl-card__year-mark::after { background: var(--gold); }
+
+/* Hint scroll on small screens */
+.timeline__scroll-hint {
+  margin-top: 1rem;
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.8125rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline__scroll-hint::after {
+  content: "→";
+  animation: nudge 1.6s var(--ease-warm) infinite;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); opacity: 0.7; }
+  50% { transform: translateX(6px); opacity: 1; }
+}
+
+/* Family card — closing chapter */
+.family {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.family__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.family__media {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.family__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.family__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.family__title em { font-family: var(--font-italic); font-style: italic; color: var(--terracotta); }
+
+@media (max-width: 880px) {
+  .family__inner { grid-template-columns: 1fr; }
+  .family__media { max-width: 480px; }
+}
+
+/* Closing card with link forward */
+.story-cta {
+  background: var(--paper);
+  padding: clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  margin-block: clamp(2rem, 5vw, 4rem);
+}
+
+.story-cta h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.story-cta p {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+  max-width: 50ch;
+  margin-inline: auto;
+}

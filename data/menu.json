@@ -1,0 +1,109 @@
+{
+  "currency": "USD",
+  "legend": {
+    "house": "House signature",
+    "veg": "Vegetarian",
+    "gf": "Gluten-free preparation available"
+  },
+  "sections": [
+    {
+      "id": "antipasti",
+      "name": "Antipasti",
+      "english": "To Begin",
+      "num": "I.",
+      "items": [
+        { "id": "bruschetta-pomodoro", "name": "Bruschetta al Pomodoro", "italian": "Tomato bruschetta", "price": 11, "veg": true, "desc": "Wood-grilled rustic bread, vine-ripened tomato, garlic, basil, finishing oil." },
+        { "id": "calamari-fritti", "name": "Calamari Fritti", "price": 14, "desc": "Lightly floured calamari, lemon, calabrian chili aioli, marinara." },
+        { "id": "antipasto-tavola", "name": "Antipasto della Tavola", "italian": "House platter for the table", "price": 22, "desc": "Prosciutto di Parma, mortadella, salami toscano, fresh mozzarella, marinated olives, peperoncini, grilled bread." },
+        { "id": "polpette", "name": "Polpette di Casa", "italian": "House meatballs", "price": 13, "desc": "Three slow-simmered meatballs in our 48-hour sugo, fresh ricotta, basil." },
+        { "id": "carciofi", "name": "Carciofi alla Romana", "italian": "Slow-braised artichokes", "price": 15, "veg": true, "desc": "Whole artichokes braised in white wine, garlic, mint, olive oil — served warm." }
+      ]
+    },
+    {
+      "id": "insalate",
+      "name": "Insalate",
+      "english": "Salads",
+      "num": "II.",
+      "items": [
+        { "id": "casaburo", "name": "The Casaburo", "italian": "Insalata Casaburo · the original", "price": 11, "house": true, "desc": "Crisp romaine, slivered red onion, sliced green onion, romano, golden croutons, dashes of red pepper, finished tableside with our peppery house dressing. Served with bottomless fresh-baked bread." },
+        { "id": "caprese", "name": "Caprese di Stagione", "italian": "Seasonal caprese", "price": 13, "veg": true, "gf": true, "desc": "Fresh mozzarella di bufala, heirloom tomato, basil, fleur de sel, aged balsamic, finishing oil." },
+        { "id": "wedge-italiano", "name": "Wedge Italiano", "price": 12, "gf": true, "desc": "Crisp iceberg, gorgonzola dolce, candied pancetta, marinated red onion, soft-boiled egg, basil green-goddess." },
+        { "id": "panzanella", "name": "Panzanella d'Estate", "italian": "Summer bread salad", "price": 12, "veg": true, "desc": "Torn ciabatta, sun gold tomato, cucumber, capers, red onion, basil, red wine vinaigrette." }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Paste",
+      "english": "Pasta",
+      "num": "III.",
+      "sub": "All pastas hand-rolled in house. Choose: cavatelli, mostaccioli, capellini, tortellini, linguini, rigatoni, fettuccine, spaghetti, ravioli or lasagna.",
+      "items": [
+        { "id": "linguine-tutto-mare", "name": "Linguine Tutto Mare", "italian": "Linguine of the sea", "price": 26, "house": true, "desc": "Shrimp, scallops, baby clams, capers, in a delicate tomato-cream sauce. Tom Casaburo's plate." },
+        { "id": "casa-cream", "name": "Funghi al Forno", "italian": "Wild mushroom cream", "price": 21, "veg": true, "desc": "A luxurious cream sauce with porcini, cremini, shiitake, garlic, white wine, romano, your choice of pasta and one additional vegetable." },
+        { "id": "lasagna", "name": "Lasagna della Nonna", "italian": "Grandmother's lasagna", "price": 19, "house": true, "desc": "Layers of fresh pasta, ricotta, slow-cooked beef sugo, mozzarella, romano, basil. The whole sheet still bubbling when it lands." },
+        { "id": "fettuccine-alfredo", "name": "Fettuccine Alfredo", "price": 17, "veg": true, "desc": "Hand-cut fettuccine, butter, fresh cream, aged romano. Add chicken +6 · shrimp +9." },
+        { "id": "linguine-vongole", "name": "Linguine con Vongole", "italian": "Linguine with clams", "price": 23, "desc": "Baby clams (or pre-shelled on request), garlic, white wine, parsley, Calabrian chili, finishing oil." },
+        { "id": "rigatoni-bolognese", "name": "Rigatoni alla Bolognese", "price": 21, "desc": "Slow-simmered Bolognese — beef, veal, pork, soffritto, San Marzano, milk, a long Sunday afternoon." },
+        { "id": "ravioli-ricotta", "name": "Ravioli di Ricotta", "italian": "Hand-folded ricotta ravioli", "price": 19, "veg": true, "desc": "Fresh sheep's-milk ricotta, lemon zest, brown butter, sage, toasted hazelnut, romano." },
+        { "id": "pomodoro-basilico", "name": "Spaghetti Pomodoro", "italian": "Tomato &amp; basil", "price": 16, "veg": true, "desc": "San Marzano slow-simmered with garlic, basil, finishing oil. The first dish on the first day." }
+      ]
+    },
+    {
+      "id": "pizze",
+      "name": "Pizze al Forno",
+      "english": "Wood-Fired Pizza",
+      "num": "IV.",
+      "sub": "Brick oven · 700&deg;F · charred bottom · 90 seconds.",
+      "items": [
+        { "id": "margherita-casa", "name": "Margherita di Casa", "italian": "House margherita", "price": 17, "veg": true, "house": true, "desc": "San Marzano, fresh mozzarella di bufala, hand-torn basil, finishing oil." },
+        { "id": "diavola", "name": "Diavola", "italian": "Spicy soppressata", "price": 19, "desc": "Spicy soppressata, San Marzano, mozzarella, calabrian chili honey." },
+        { "id": "quattro-formaggi", "name": "Quattro Formaggi", "italian": "Four cheeses", "price": 19, "veg": true, "desc": "Fresh mozzarella, gorgonzola dolce, fontina, romano, fresh thyme, no sauce." },
+        { "id": "veggie", "name": "Pizza Vegetariana", "italian": "Garden pizza", "price": 18, "veg": true, "desc": "Roasted bell pepper, cremini, red onion, baby spinach, sweet sungold tomato, mozzarella." },
+        { "id": "prosciutto-rucola", "name": "Prosciutto e Rucola", "italian": "Prosciutto &amp; arugula", "price": 21, "desc": "Mozzarella, San Marzano, prosciutto di Parma added after firing, baby arugula, lemon, parmigiano shaved." },
+        { "id": "salsiccia-friarelli", "name": "Salsiccia &amp; Friarielli", "italian": "Sausage &amp; broccoli rabe", "price": 20, "desc": "House fennel sausage, garlicky broccoli rabe, fresh mozzarella, calabrian chili." }
+      ]
+    },
+    {
+      "id": "carne-pesce",
+      "name": "Carne &amp; Pesce",
+      "english": "Land &amp; Sea",
+      "num": "V.",
+      "items": [
+        { "id": "pollo-griglia", "name": "Pollo al Griglia", "italian": "Wood-fired rotisserie chicken", "price": 24, "house": true, "gf": true, "desc": "Half free-range chicken on the wood-fired rotisserie, charred Italian vegetables, lemon, rosemary, finishing oil." },
+        { "id": "salmone-caccia", "name": "Salmone Caccia", "italian": "Pan-seared salmon", "price": 28, "gf": true, "desc": "Atlantic salmon, lemon-caper brown butter, charred broccolini, soft polenta." },
+        { "id": "ossobuco", "name": "Ossobuco di Vitello", "italian": "Braised veal shank", "price": 36, "desc": "Veal shank slow-braised in white wine, soffritto, San Marzano, gremolata, saffron risotto Milanese." },
+        { "id": "bistecca", "name": "Bistecca alla Fiorentina", "italian": "Florentine ribeye for two", "price": 78, "gf": true, "desc": "28-day dry-aged 32oz ribeye over hardwood, sea salt, lemon, finishing oil, charred radicchio. Carved tableside." },
+        { "id": "vitello-marsala", "name": "Vitello al Marsala", "italian": "Veal Marsala", "price": 30, "desc": "Pounded veal, cremini, marsala demiglace, mascarpone, hand-cut tagliatelle." }
+      ]
+    },
+    {
+      "id": "dolci",
+      "name": "Dolci",
+      "english": "Sweets",
+      "num": "VI.",
+      "items": [
+        { "id": "tiramisu", "name": "Tiramisù della Casa", "italian": "House tiramisu", "price": 11, "veg": true, "desc": "Espresso-soaked ladyfingers, mascarpone cream, cocoa, a dusting of bittersweet chocolate." },
+        { "id": "cannoli", "name": "Cannoli Siciliani", "italian": "Sicilian cannoli", "price": 9, "veg": true, "desc": "Crisp shells filled to order with sweetened sheep's-milk ricotta, candied orange, pistachio." },
+        { "id": "panna-cotta", "name": "Panna Cotta al Limone", "italian": "Lemon panna cotta", "price": 9, "veg": true, "gf": true, "desc": "Soft-set lemon-vanilla cream, macerated berries, candied lemon zest." },
+        { "id": "affogato", "name": "Affogato", "italian": "Drowned vanilla gelato", "price": 8, "veg": true, "desc": "Single shot of espresso poured tableside over a scoop of vanilla bean gelato." }
+      ]
+    },
+    {
+      "id": "vino",
+      "name": "Vino &amp; Caffè",
+      "english": "Wine &amp; Coffee",
+      "num": "VII.",
+      "sub": "Glass · half carafe · bottle. Full list at the table.",
+      "items": [
+        { "id": "chianti-classico", "name": "Chianti Classico", "italian": "Sangiovese, Toscana", "price": 13, "desc": "Bright cherry, leather, dust. The first pour for the bread basket." },
+        { "id": "barbera-asti", "name": "Barbera d'Asti", "italian": "Barbera, Piemonte", "price": 12, "desc": "Soft tannins, sour cherry, picnic-friendly. Drinks like dinner with friends." },
+        { "id": "barolo", "name": "Barolo", "italian": "Nebbiolo, Piemonte", "price": 22, "desc": "Rose petal, tar, structured. The bottle for an ossobuco night." },
+        { "id": "primitivo", "name": "Primitivo di Manduria", "italian": "Primitivo, Puglia", "price": 11, "desc": "Plum, fig, easy. House favorite by the half-carafe." },
+        { "id": "vermentino", "name": "Vermentino", "italian": "Vermentino, Sardegna", "price": 12, "desc": "Sea spray, lemon zest, mineral. Built for the linguine vongole." },
+        { "id": "espresso", "name": "Espresso", "price": 4, "veg": true, "desc": "Pulled to order. Double on request." },
+        { "id": "cappuccino", "name": "Cappuccino", "price": 5, "veg": true, "desc": "After 11&thinsp;a.m., we look the other way." },
+        { "id": "amaro", "name": "Amaro Casa", "italian": "House digestif", "price": 9, "desc": "A few fingers of amaro, served at room temperature, after dinner." }
+      ]
+    }
+  ]
+}

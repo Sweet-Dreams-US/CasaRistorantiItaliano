@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <path id="stamp-circle" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" />
+  </defs>
+  <text fill="currentColor" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="13" letter-spacing="4">
+    <textPath href="#stamp-circle" startOffset="0%">FAMILY OWNED · SINCE 1977 · FORT WAYNE, INDIANA · DAL 1977 · </textPath>
+  </text>
+</svg>
