@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Operator dashboard — internal use, do not crawl or index
+Disallow: /admin/
+Disallow: /admin
+
+Sitemap: https://sweet-dreams-us.github.io/CasaRistorantiItaliano/sitemap.xml
